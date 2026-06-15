@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NovaSense NeuroDot convierte texto y voz en Braille físico en tiempo real." />
+  <title>NovaSense | NeuroDot</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="NovaSense inicio">
+      <img src="images/logo-novasense.png" alt="NovaSense" class="brand-logo">
+    </a>
+
+    <nav class="main-nav" aria-label="Principal">
+      <a class="active" href="#">Inicio</a>
+      <a href="#neurodot">NeuroDot</a>
+      <a href="#tecnologia">Tecnología</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#accesibilidad">Accesibilidad</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="shop-btn" href="#tienda">Tienda <i class="fa-solid fa-bag-shopping"></i></a>
+      <a class="profile-btn" href="#contacto" aria-label="Perfil"><i class="fa-regular fa-user"></i></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="announcement">
+        <span>NUEVA</span>
+        <strong>Nueva versión EDU ya disponible</strong>
+        <i class="fa-solid fa-arrow-right"></i>
+        <button aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Tecnología que<br>se puede <span>sentir.</span></h1>
+          <p>NeuroDot convierte texto y voz en Braille físico en tiempo real, acercando la información a todas las personas, sin límites.</p>
+
+          <div class="hero-buttons">
+            <a class="primary-btn" href="#neurodot">Descubre NeuroDot <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="secondary-btn" href="#funciona">Cómo funciona <i class="fa-regular fa-circle-play"></i></a>
+          </div>
+
+          <div class="trust-items">
+            <article><i class="fa-solid fa-users"></i><span>Diseñado para<br>todas las edades</span></article>
+            <article><i class="fa-solid fa-graduation-cap"></i><span>Ideal para<br>educación</span></article>
+            <article><i class="fa-solid fa-shield-halved"></i><span>Seguro, resistente<br>y portátil</span></article>
+          </div>
+        </div>
+
+        <div class="hero-product">
+          <img src="images/neurodot-edu.png" alt="NeuroDot Edu" class="hero-device-img">
+          <div class="pedestal"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="tecnologia" aria-label="Características principales">
+      <article><i class="fa-solid fa-language"></i><div><strong>Traducción instantánea</strong><p>Texto y voz a Braille al instante.</p></div></article>
+      <article><i class="fa-brands fa-bluetooth-b"></i><div><strong>Conectividad inteligente</strong><p>Bluetooth y USB-C para todos tus dispositivos.</p></div></article>
+      <article><i class="fa-solid fa-battery-full"></i><div><strong>Batería de larga duración</strong><p>Hasta 10 horas de uso continuo.</p></div></article>
+      <article><i class="fa-regular fa-hand-pointer"></i><div><strong>Fácil e intuitivo</strong><p>Interfaz accesible para todos.</p></div></article>
+    </section>
+
+    <section class="products" id="neurodot">
+      <div class="section-title">
+        <h2>Conoce la familia <span>NeuroDot</span></h2>
+        <p>Tres modelos diseñados para cada necesidad.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="images/neurodot-lite.png" alt="NeuroDot Lite" class="product-img">
+          <div>
+            <h3>NeuroDot Lite</h3>
+            <p>Diseño sencillo, color negro y traducción por audio y texto.</p>
+            <strong>€ 249.99</strong>
+            <button class="info-btn" data-product="lite">+ info</button>
+          </div>
+        </article>
+
+        <article class="product-card featured-product">
+          <img src="images/neurodot-pro.png" alt="NeuroDot Pro" class="product-img">
+          <div>
+            <h3>NeuroDot Pro</h3>
+            <p>Diseño elegante, color dorado y conexión móvil.</p>
+            <strong>€ 699.99</strong>
+            <button class="info-btn" data-product="pro">+ info</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <span class="badge">NUEVA</span>
+          <img src="images/neurodot-edu.png" alt="NeuroDot Edu" class="product-img">
+          <div>
+            <h3>NeuroDot Edu</h3>
+            <p>Configurable por el colegio, color azul pastel y almacenamiento de 2GB.</p>
+            <strong>€ 199.99</strong>
+            <button class="info-btn" data-product="edu">+ info</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="product-modal" id="productModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <button class="modal-close" data-close-modal aria-label="Cerrar detalles">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <img id="modalImage" src="" alt="" class="modal-img">
+          <div class="modal-content">
+            <span id="modalTag" class="modal-tag"></span>
+            <h3 id="modalTitle"></h3>
+            <strong id="modalPrice"></strong>
+            <p id="modalDescription"></p>
+            <ul id="modalFeatures"></ul>
+            <a href="#contacto" class="modal-cta">Solicitar información <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="how" id="funciona">
+      <div class="section-title">
+        <h2>Cómo funciona</h2>
+        <p>Una experiencia sencilla desde cualquier dispositivo.</p>
+      </div>
+      <div class="steps">
+        <article><span>01</span><i class="fa-solid fa-mobile-screen-button"></i><h3>Conecta</h3><p>Empareja NeuroDot por Bluetooth o USB-C.</p></article>
+        <article><span>02</span><i class="fa-solid fa-microphone-lines"></i><h3>Convierte</h3><p>Recibe texto o voz y transforma la información en tiempo real.</p></article>
+        <article><span>03</span><i class="fa-solid fa-braille"></i><h3>Siente</h3><p>Lee el contenido mediante Braille físico dinámico.</p></article>
+      </div>
+    </section>
+
+    <section class="about" id="nosotros">
+      <div>
+        <h2>Tecnología inclusiva para aprender, trabajar y vivir mejor.</h2>
+        <p>NovaSense desarrolla soluciones accesibles que conectan a las personas con la información de forma natural, rápida y autónoma.</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Diseño centrado en la accesibilidad.</li>
+          <li><i class="fa-solid fa-check"></i> Pensado para hogares, aulas y entornos profesionales.</li>
+          <li><i class="fa-solid fa-check"></i> Interfaz clara, robusta y fácil de usar.</li>
+        </ul>
+      </div>
+      <img src="images/logo-neurodot-edu.png" alt="NeuroDot Edu">
+    </section>
+
+    <section class="accessibility" id="accesibilidad">
+      <div class="section-title">
+        <h2>Accesibilidad desde el diseño</h2>
+        <p>La web y el producto están pensados para facilitar el acceso a la información.</p>
+      </div>
+      <div class="access-grid">
+        <article><i class="fa-solid fa-universal-access"></i><h3>Uso inclusivo</h3><p>Compatible con necesidades educativas y personales diversas.</p></article>
+        <article><i class="fa-solid fa-eye-low-vision"></i><h3>Lectura táctil</h3><p>Braille físico para consultar información en tiempo real.</p></article>
+        <article><i class="fa-solid fa-keyboard"></i><h3>Navegación clara</h3><p>Estructura semántica, textos alternativos y botones descriptivos.</p></article>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div>
+        <h2>¿Quieres saber más?</h2>
+        <p>Déjanos tus datos y te contactaremos para enseñarte NeuroDot.</p>
+      </div>
+      <form>
+        <label>Nombre <input type="text" placeholder="Tu nombre"></label>
+        <label>Email <input type="email" placeholder="tu@email.com"></label>
+        <label>Mensaje <textarea placeholder="Cuéntanos qué necesitas"></textarea></label>
+        <button type="submit">Enviar mensaje <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="images/logo-novasense.png" alt="NovaSense">
+    <p>© 2026 NovaSense. Tecnología que te conecta.</p>
+    <div>
+      <a href="#neurodot">NeuroDot</a>
+      <a href="#accesibilidad">Accesibilidad</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </footer>
+
+  <script>
+    const products = {
+      lite: {
+        name: "NeuroDot Lite",
+        tag: "Uso diario",
+        price: "€ 249.99",
+        image: "images/neurodot-lite.png",
+        description: "Modelo ligero y sencillo, pensado para usuarios que necesitan una solución práctica para leer contenido en Braille físico.",
+        features: [
+          "Diseño sencillo",
+          "Color negro",
+          "Traducción por audio y texto",
+          "Almacenamiento de 4GB"
+        ]
+      },
+      pro: {
+        name: "NeuroDot Pro",
+        tag: "Máximo rendimiento",
+        price: "€ 699.99",
+        image: "images/neurodot-pro.png",
+        description: "Versión avanzada con diseño elegante, acabados dorados y mejoras en traducción, almacenamiento y conectividad.",
+        features: [
+          "Diseño elegante",
+          "Color dorado",
+          "Traducción y almacenamiento mejorados",
+          "Conexión móvil"
+        ]
+      },
+      edu: {
+        name: "NeuroDot Edu",
+        tag: "Educación",
+        price: "€ 199.99",
+        image: "images/neurodot-edu.png",
+        description: "Modelo diseñado para centros educativos, configurable por el colegio y preparado para facilitar el aprendizaje inclusivo.",
+        features: [
+          "Configurable por el colegio",
+          "Color azul pastel",
+          "Traducción por audio y texto",
+          "Almacenamiento de 2GB"
+        ]
+      }
+    };
+
+    const modal = document.getElementById("productModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalTag = document.getElementById("modalTag");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalPrice = document.getElementById("modalPrice");
+    const modalDescription = document.getElementById("modalDescription");
+    const modalFeatures = document.getElementById("modalFeatures");
+
+    function openProductModal(productKey) {
+      const product = products[productKey];
+      if (!product) return;
+
+      modalImage.src = product.image;
+      modalImage.alt = product.name;
+      modalTag.textContent = product.tag;
+      modalTitle.textContent = product.name;
+      modalPrice.textContent = product.price;
+      modalDescription.textContent = product.description;
+      modalFeatures.innerHTML = product.features
+        .map(feature => `<li><i class="fa-solid fa-check"></i>${feature}</li>`)
+        .join("");
+
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    }
+
+    function closeProductModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    }
+
+    document.querySelectorAll("[data-product]").forEach(button => {
+      button.addEventListener("click", () => openProductModal(button.dataset.product));
+    });
+
+    document.querySelectorAll("[data-close-modal]").forEach(element => {
+      element.addEventListener("click", closeProductModal);
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeProductModal();
+    });
+  </script>
+
+</body>
+</html>
